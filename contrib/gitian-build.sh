@@ -233,6 +233,7 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
+    sudo service apt-cacher-ng start
     git clone https://github.com/bitcoin-core/gitian.sigs.git
     git clone https://github.com/bitcoin-core/bitcoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
